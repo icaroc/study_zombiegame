@@ -640,6 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Jogador: {fileID: 1728169921345532334, guid: a89bfd7b1e90a9d44a07f1b8c150211f, type: 3}
   velocidade: 3
+  Dano: 20
 --- !u!54 &2626816345282512927
 Rigidbody:
   m_ObjectHideFlags: 0

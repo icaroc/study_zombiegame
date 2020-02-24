@@ -7,6 +7,7 @@ public class ControlaZumbi : MonoBehaviour
 
     public GameObject Jogador;
     public float velocidade = 5;
+    public int Dano = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +46,7 @@ public class ControlaZumbi : MonoBehaviour
 
     void AtacaJogador()
     {
-        Jogador.GetComponent<ControlaJogador>().TomarDano();
+        Jogador.GetComponent<ControlaJogador>().TomarDano(Dano);
     }
 
 }

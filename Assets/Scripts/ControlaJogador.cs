@@ -10,8 +10,9 @@ public class ControlaJogador : MonoBehaviour
     Vector3 direcao;
     public LayerMask FloorMask;
     public GameObject TextoGameOver;
-    public bool vidaJogador = true;
     public int Vida = 100;
+    public ControlaInterface scriptControlaInterface;
+    public AudioClip SomDeDano;
 
     private void Start()
     {
@@ -36,7 +37,7 @@ public class ControlaJogador : MonoBehaviour
             GetComponent<Animator>().SetBool("Movendo", false);
         }
 
-        if(vidaJogador == false)
+        if(Vida <= 0)
         {
             if(Input.GetButtonDown("Fire1"))
             {
@@ -67,15 +68,17 @@ public class ControlaJogador : MonoBehaviour
 
     }
 
-    public void TomarDano () {
+    public void TomarDano (int dano) {
         
-        Vida -= 25;
+        Vida -= dano;
+
+        scriptControlaInterface.AtualizarSliderVidaJogador();
+
+        ControlaAudio.instancia.PlayOneShot(SomDeDano);
         
         if(Vida <= 0) {
             Time.timeScale = 0;
             TextoGameOver.SetActive(true);
-            vidaJogador = false;
-        
         }
     }
 
