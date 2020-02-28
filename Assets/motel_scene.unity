@@ -7416,6 +7416,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1682076591}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1011348084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011348076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e1a0f0505dfbf4581593a9c499feb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1014439415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11712,21 +11724,13 @@ PrefabInstance:
       propertyPath: scriptControlaInterface
       value: 
       objectReference: {fileID: 609942272}
-    - target: {fileID: 1544169347, guid: 4b3bb44effa49480d8d18049684cc33a, type: 3}
-      propertyPath: SomDeDano
-      value: 
-      objectReference: {fileID: 8300000, guid: e6d306ee301373848861eb1253d1ccfa, type: 3}
-    - target: {fileID: 1544169348, guid: 4b3bb44effa49480d8d18049684cc33a, type: 3}
-      propertyPath: SomDoTiro
-      value: 
-      objectReference: {fileID: 8300000, guid: 6650f3ac0b435fc429344104199b796f, type: 3}
+    - target: {fileID: 1544169351, guid: 4b3bb44effa49480d8d18049684cc33a, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1884102019447498, guid: 4b3bb44effa49480d8d18049684cc33a, type: 3}
       propertyPath: m_Name
       value: Jogador
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884102019447498, guid: 4b3bb44effa49480d8d18049684cc33a, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4610746654156704, guid: 4b3bb44effa49480d8d18049684cc33a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12816,7 +12820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7460399
+      value: 1.4149493
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}

@@ -6,17 +6,21 @@ using UnityEngine.SceneManagement;
 public class ControlaJogador : MonoBehaviour
 {
    
-    public float Velocidade = 10;
     Vector3 direcao;
+    public float Velocidade = 10;
+    public int Vida = 100;
     public LayerMask FloorMask;
     public GameObject TextoGameOver;
-    public int Vida = 100;
     public ControlaInterface scriptControlaInterface;
     public AudioClip SomDeDano;
+    private MovimentoJogador meuMovimentoJogador;
+    private AnimacaoPersonagem animacaoJogador;
 
     private void Start()
     {
         Time.timeScale = 1;
+        meuMovimentoJogador = GetComponent<MovimentoJogador>();
+        animacaoJogador = GetComponent<AnimacaoPersonagem>();
     }
 
     // Update is called once per frame
@@ -27,15 +31,7 @@ public class ControlaJogador : MonoBehaviour
 
         direcao = new Vector3(eixoX, 0, eixoZ);
 
-        // transform.Translate(direcao * Velocidade * Time.deltaTime);
-
-        // trocar a animação quando se move
-        if(direcao != Vector3.zero){
-            GetComponent<Animator>().SetBool("Movendo", true);
-        }
-        else{
-            GetComponent<Animator>().SetBool("Movendo", false);
-        }
+        animacaoJogador.Movimentar(direcao.magnitude);
 
         if(Vida <= 0)
         {
@@ -50,21 +46,10 @@ public class ControlaJogador : MonoBehaviour
     void FixedUpdate(){
 
         // movimento pelo rigid body
-        GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + (direcao * Velocidade * Time.deltaTime));
+        meuMovimentoJogador.Movimentar(direcao, Velocidade);
 
-        // facing quando se movimenta
-        Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(raio.origin, raio.direction * 100, Color.red);
-
-        RaycastHit impacto;
-
-        if(Physics.Raycast(raio, out impacto, 100, FloorMask)){
-            Vector3 posicaoMira = impacto.point - transform.position;
-            posicaoMira.y = transform.position.y;
-            
-            Quaternion looking = Quaternion.LookRotation(posicaoMira);
-            GetComponent<Rigidbody>().MoveRotation(looking);
-        }
+        // rotação para o mouse
+        meuMovimentoJogador.RotacaoJogador(FloorMask);
 
     }
 

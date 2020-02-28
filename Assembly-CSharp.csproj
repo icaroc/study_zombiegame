@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AnimacaoPersonagem.cs" />
      <Compile Include="Assets\Scripts\Bala.cs" />
      <Compile Include="Assets\Scripts\ControlaArma.cs" />
      <Compile Include="Assets\Scripts\ControlaAudio.cs" />
@@ -53,6 +54,8 @@
      <Compile Include="Assets\Scripts\ControlaJogador.cs" />
      <Compile Include="Assets\Scripts\ControlaZumbi.cs" />
      <Compile Include="Assets\Scripts\GeradorZumbis.cs" />
+     <Compile Include="Assets\Scripts\MovimentoJogador.cs" />
+     <Compile Include="Assets\Scripts\MovimentoPersonagem.cs" />
      <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes.txt" />
      <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes_Zumbi.txt" />
  <Reference Include="UnityEngine">
@@ -593,6 +596,14 @@
       <Project>{edb34fc8-2dc7-d3a1-2bb9-7b472316cdb4}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Polybrush.csproj">
+      <Project>{1ffa03b5-ea5e-3c10-4736-418154c68cdc}</Project>
+      <Name>Unity.Polybrush</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Polybrush.Editor.csproj">
+      <Project>{2769bdc3-8542-ed8f-352b-941c3a2af6b4}</Project>
+      <Name>Unity.Polybrush.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{5e86af42-83fb-2fb6-5ead-6d1ac4f024a6}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -613,6 +624,10 @@
       <Project>{6f46a413-8bf2-b6bf-be6d-a6974ba50e82}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{2807bbc7-3692-afdd-4ef6-3a23108f90ec}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{36152a93-3bd7-2339-b211-940f2556035c}</Project>
       <Name>Unity.TextMeshPro</Name>
@@ -620,18 +635,6 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{5dcc6dc2-eaa5-77fc-29f8-dcbd67b0e194}</Project>
       <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Polybrush.csproj">
-      <Project>{1ffa03b5-ea5e-3c10-4736-418154c68cdc}</Project>
-      <Name>Unity.Polybrush</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Polybrush.Editor.csproj">
-      <Project>{2769bdc3-8542-ed8f-352b-941c3a2af6b4}</Project>
-      <Name>Unity.Polybrush.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{2807bbc7-3692-afdd-4ef6-3a23108f90ec}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
