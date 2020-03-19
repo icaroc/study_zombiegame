@@ -54,8 +54,10 @@
      <Compile Include="Assets\Scripts\ControlaJogador.cs" />
      <Compile Include="Assets\Scripts\ControlaZumbi.cs" />
      <Compile Include="Assets\Scripts\GeradorZumbis.cs" />
+     <Compile Include="Assets\Scripts\IMatavel.cs" />
      <Compile Include="Assets\Scripts\MovimentoJogador.cs" />
      <Compile Include="Assets\Scripts\MovimentoPersonagem.cs" />
+     <Compile Include="Assets\Scripts\Status.cs" />
      <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes.txt" />
      <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes_Zumbi.txt" />
  <Reference Include="UnityEngine">

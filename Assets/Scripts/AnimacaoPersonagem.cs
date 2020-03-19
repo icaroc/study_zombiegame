@@ -6,7 +6,7 @@ public class AnimacaoPersonagem : MonoBehaviour
 {
     private Animator meuAnimator;
 
-    void awake ()
+    void Awake ()
     {
         meuAnimator = GetComponent<Animator>();
     }

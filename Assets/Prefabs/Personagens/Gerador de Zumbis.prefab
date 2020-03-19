@@ -45,3 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 3}
   tempoGerar: 2
+  LayerZumbi:
+    serializedVersion: 2
+    m_Bits: 512
+  DistanciaJogadorGeracao: 10
