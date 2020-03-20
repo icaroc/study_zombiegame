@@ -38,7 +38,7 @@ public class ControlaZumbi : MonoBehaviour, IMatavel
         {
             Vagar();
         }
-        else if(distancia > 2.5)
+        else if(distancia > 3.5)
         {            
             direcao = Jogador.transform.position - transform.position;
             movimentaInimigo.Movimentar(direcao, statusInimigo.Velocidade);
@@ -46,6 +46,7 @@ public class ControlaZumbi : MonoBehaviour, IMatavel
         }
         else
         {
+            direcao = Jogador.transform.position - transform.position;
             animacaoInimigo.Atacar(true);
         }
     }
